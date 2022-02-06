@@ -1,0 +1,38 @@
+<div id="<%= dom_id friend %>" class="card text-white bg-secondary mb-3">
+  <div class="card-body">
+     <p>
+       <strong>First name:</strong>
+       <%= friend.first_name %>
+     </p>
+
+     <p>
+       <strong>Last name:</strong>
+       <%= friend.last_name %>
+     </p>
+
+     <p>
+       <strong>Email:</strong>
+       <%= friend.email %>
+     </p>
+
+     <p>
+       <strong>Phone:</strong>
+       <%= friend.phone %>
+     </p>
+
+     <p>
+       <strong>Twitter:</strong>
+       <%= friend.twitter %>
+     </p>
+     <p>
+       <strong>User Id:</strong>
+       <%= friend.user_id %>
+     </p>
+
+     <br>
+
+     <% if controller_name == "friends" && action_name == "index" %>
+        <%= link_to "Show this friend", friend, class: "btn btn-dark", style: " width:100%" %>
+     <% end %>
+  </div>
+</div>

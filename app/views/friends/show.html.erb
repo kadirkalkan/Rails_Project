@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <h4>Show User</h4>
+  </div>
+  <div class="card-body" style="padding:1rem 2rem; ">
+       <div class="row">
+          <%= render @friend %>
+       </div>
+        <div class="row">
+            <div class="col col-sm-3" style="padding:0px;">
+              <%= link_to "Back", friends_path, class:"btn btn-primary" %>
+            </div>
+            <div class="col col-sm-9 d-flex justify-content-end" style="padding:0px;">
+            
+              <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-warning", style: 'margin-right:1%;' %>
+              <%= button_to "Destroy", @friend,:onclick => "return confirm('Are you sure?')", form: {style: 'display:inline-block;'},  method: :delete, class:"btn btn-danger" %>
+            </div>
+        </div>
+  </div>
+</div>
+
+
+
+
+

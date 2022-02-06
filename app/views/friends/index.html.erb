@@ -1,0 +1,34 @@
+<% if user_signed_in? %>
+
+<div class="card">
+  <div class="card-header">
+     <h4 style="display: inline-block;">Friends</h4>
+     <%= link_to "New friend", new_friend_path, style:"float:right", class:"btn btn-success" %>
+  </div>
+  <div class="card-body">
+     <div id="friends" class="row">
+       <% @friends.each do |friend| %>
+          <% if current_user == friend.user %>
+            <% @current_user_friends.push(friend) %>
+           <div class="col col-sm-3">
+             <%= render friend %>
+           </div>
+         <% end %>
+       <% end %>
+
+         <% if @current_user_friends.count == 0 %>
+          <h1>You have no friends :(</h1>
+         <% end %>
+     </div>
+  </div>
+</div>
+
+<% else %>
+
+<h1>Hello World</h1>
+This is my first rails page
+
+<% end %>
+
+
+
