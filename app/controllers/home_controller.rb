@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @name = "Kadir KALKAN"
     @mail = "kadirkalkanx@gmail.com"
     @url = "https://www.kadirkalkan.com"
-    @github = "github.com/kadirkalkan"
-    @source = "github.com/kadirkalkan/Rails_Project"
+    @github = "https://github.com/kadirkalkan"
+    @source = "https://github.com/kadirkalkan/Rails_Project"
   end
 end
