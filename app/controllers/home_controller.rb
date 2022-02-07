@@ -1,7 +1,4 @@
 class HomeController < ApplicationController
-  def index
-  end
-
   def about
     @name = "Kadir KALKAN"
     @mail = "kadirkalkanx@gmail.com"
